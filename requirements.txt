@@ -1,0 +1,5 @@
+matplotlib
+hx711-rpi-py
+oauth2client
+google-api-python-client
+pillow

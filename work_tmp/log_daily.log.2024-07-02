@@ -1,0 +1,22 @@
+2024-07-02 07:01:25,874 - dailyLogger - INFO - Meal History Add -->weight 67.0g protein 6.7669999999999995g, fat 1.7420000000000002g, carbs 36.18g, chol 0.0g, sugar 2.948g, aoacfib 4.288
+2024-07-02 07:01:25,877 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7fad48a6c0>
+2024-07-02 07:01:25,893 - dailyLogger - INFO - Meal History Add -->weight 8.4g protein 0g, fat 8.3916g, carbs 0.0g, chol 0.0g, sugar 0.0g, aoacfib 0.0
+2024-07-02 07:01:25,894 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7fa87b4740>
+2024-07-02 07:01:25,911 - dailyLogger - INFO - Meal History Add -->weight 107.5g protein 14.2975g, fat 11.395g, carbs 0g, chol 454.725g, sugar 0g, aoacfib 0.0
+2024-07-02 07:01:25,912 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7fad48a840>
+2024-07-02 12:47:40,627 - dailyLogger - INFO - Meal History Add -->weight 357.5g protein 23.595g, fat 14.657499999999997g, carbs 72.92999999999999g, chol 38.2525g, sugar 6.7925g, aoacfib 7.5075
+2024-07-02 12:47:40,628 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7facd19bc0>
+2024-07-02 14:03:02,328 - dailyLogger - INFO - Meal History Add -->weight 130.5g protein 1.044g, fat 0g, carbs 16.704g, chol 0.0g, sugar 14.877g, aoacfib 1.1745
+2024-07-02 14:03:02,329 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7fa87b4a40>
+2024-07-02 20:00:31,081 - dailyLogger - INFO - Meal History Add -->weight 158.4g protein 4.4352g, fat 0.6336g, carbs 49.26240000000001g, chol 0.0g, sugar 0g, aoacfib 0.792
+2024-07-02 20:00:31,082 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7fab0393c0>
+2024-07-02 20:00:31,105 - dailyLogger - INFO - Meal History Add -->weight 93.9g protein 18.78g, fat 35.7759g, carbs 0.0g, chol 92.961g, sugar 0.0g, aoacfib 0.0
+2024-07-02 20:00:31,106 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7fab03a8c0>
+2024-07-03 06:24:57,008 - dailyLogger - INFO - Meal History Add -->weight 85.9g protein 9.620800000000001g, fat 2.4911000000000003g, carbs 42.262800000000006g, chol 0.0g, sugar 2.7488000000000006g, aoacfib 7.0438
+2024-07-03 06:24:57,009 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7faad24b40>
+2024-07-03 06:24:57,024 - dailyLogger - INFO - Meal History Add -->weight 8.4g protein 0.0504g, fat 6.9048g, carbs 0.0504g, chol 17.9088g, sugar 0.0504g, aoacfib 0.0
+2024-07-03 06:24:57,025 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7faad246c0>
+2024-07-03 06:24:57,042 - dailyLogger - INFO - Meal History Add -->weight 39.6g protein 9.0288g, fat 20.5128g, carbs 5.1876g, chol 0.0g, sugar 2.6532g, aoacfib 2.6136
+2024-07-03 06:24:57,043 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7faad24e40>
+2024-07-03 06:24:57,057 - dailyLogger - INFO - Meal History Add -->weight 18.9g protein 0.11339999999999999g, fat 0.0g, carbs 13.040999999999999g, chol 0.0g, sugar 13.040999999999999g, aoacfib 0
+2024-07-03 06:24:57,058 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7faad24b40>

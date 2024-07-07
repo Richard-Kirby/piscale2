@@ -1,0 +1,5 @@
+2024-07-02 06:12:06,813 - bathLogger - DEBUG - received message:2024-07-02 06:12:06.813521, b'PICO Scale Measurement 2024-07-02 05:12:06 , 80.1', ["b'PICO Scale Measurement 2024-07-02 05:12:06 ", " 80.1'"], 80.1
+2024-07-03 05:52:43,073 - bathLogger - DEBUG - received message:2024-07-03 05:52:43.072802, b'PICO Scale Measurement 2024-07-03 04:52:43 , 80.1', ["b'PICO Scale Measurement 2024-07-03 04:52:43 ", " 80.1'"], 80.1
+2024-07-03 21:12:00,643 - bathLogger - DEBUG - Startup bathroom_scale_if
+2024-07-03 21:13:47,079 - bathLogger - DEBUG - Startup bathroom_scale_if
+2024-07-03 22:01:43,374 - bathLogger - DEBUG - Startup bathroom_scale_if

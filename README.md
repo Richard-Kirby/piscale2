@@ -4,7 +4,14 @@ Connecting a Pi to a kitchen Scale - this allows tracking of your calorie intake
 
 Need to first install the C++ library that the HX711 library relies upon. Repo is here: https://github.com/endail/hx711
 
-Install dependencies via pip3 install - r requirements.txt
+Set up a virtual Python environment. Using "python -m venv venv" - this puts a new Virtual environment directory, which you then need to activate by 'source venv/bin/activate'. You then need to install the rest of the requirements in the virtual environment.   
+
+
+Once it is clear you are running in the venv, the you need to run this 'Install dependencies via pip3 install - r requirements.txt'
+
+For some reason the hx711 shared object file wasn't found. 'ImportError: libhx711.so: cannot open shared object file: No such file or directory'. Running 'sudo ldconfig' solved thid problem. 
+
+
 
 After this step, I was still getting the problem below.
 

@@ -1,0 +1,16 @@
+2025-11-17 07:43:17,342 - dailyLogger - INFO - Meal History Add -->weight 79.2g protein 8.8704g, fat 2.2968g, carbs 38.9664g, chol 0.0g, sugar 2.5344g, aoacfib 6.4944
+2025-11-17 07:43:17,344 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7f9ee3aac0>
+2025-11-17 07:43:17,354 - dailyLogger - INFO - Meal History Add -->weight 8.8g protein 0.0528g, fat 7.233600000000001g, carbs 0.0528g, chol 18.7616g, sugar 0.0528g, aoacfib 0.0
+2025-11-17 07:43:17,355 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7f9ee399c0>
+2025-11-17 07:43:17,365 - dailyLogger - INFO - Meal History Add -->weight 22.6g protein 5.152800000000001g, fat 11.706800000000001g, carbs 2.9606g, chol 0.0g, sugar 1.5142000000000002g, aoacfib 1.4916
+2025-11-17 07:43:17,366 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7f9ee3ab40>
+2025-11-17 12:24:22,778 - dailyLogger - INFO - Meal History Add -->weight 78.7g protein 8.8144g, fat 2.2822999999999998g, carbs 38.720400000000005g, chol 0.0g, sugar 2.5184g, aoacfib 6.453399999999999
+2025-11-17 12:24:22,779 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7f9c8c26c0>
+2025-11-17 12:24:22,786 - dailyLogger - INFO - Meal History Add -->weight 10.5g protein 0.063g, fat 8.631g, carbs 0.063g, chol 22.386g, sugar 0.063g, aoacfib 0.0
+2025-11-17 12:24:22,786 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7f9c8c2340>
+2025-11-17 12:24:22,797 - dailyLogger - INFO - Meal History Add -->weight 155.2g protein 38.6448g, fat 1.5519999999999998g, carbs 0.0g, chol 72.944g, sugar 0.0g, aoacfib 0.0
+2025-11-17 12:24:22,797 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7f9c8c0840>
+2025-11-17 19:30:13,362 - dailyLogger - INFO - Meal History Add -->weight 105.2g protein 2.9456g, fat 0.42080000000000006g, carbs 32.717200000000005g, chol 0.0g, sugar 0g, aoacfib 0.526
+2025-11-17 19:30:13,363 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7f9ee3ab40>
+2025-11-17 19:30:13,374 - dailyLogger - INFO - Meal History Add -->weight 280.8g protein 37.908g, fat 4.212000000000001g, carbs 6.4584g, chol 105.5808g, sugar 3.0888000000000004g, aoacfib 0.5616
+2025-11-17 19:30:13,375 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7f9ee3bd40>

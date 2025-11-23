@@ -1,0 +1,4 @@
+2025-11-14 06:51:03,786 - dailyLogger - INFO - Meal History Add -->weight 101.9g protein 8.8653g, fat 2.3437g, carbs 77.13830000000002g, chol 0.10190000000000002g, sugar 20.6857g, aoacfib 8.7634
+2025-11-14 06:51:03,788 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7f9ee3a340>
+2025-11-14 06:51:03,800 - dailyLogger - INFO - Meal History Add -->weight 248.2g protein 8.4388g, fat 8.9352g, carbs 11.417199999999998g, chol 29.783999999999995g, sugar 11.417199999999998g, aoacfib 0.0
+2025-11-14 06:51:03,801 - dailyLogger - INFO - sql return <sqlite3.Cursor object at 0x7f9ee392c0>

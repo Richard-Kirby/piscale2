@@ -1,0 +1,15 @@
+2025-06-13 08:15:43,610 - googleifLogger - INFO - google_fit_if Google If __init__
+2025-06-13 08:15:44,842 - googleifLogger - INFO - google_fit_if Google If run() function start
+2025-06-13 08:15:45,179 - googleifLogger - INFO - Number of records deleted from today EndDate 2025-06-13 0 and last two 2
+2025-06-13 08:15:45,180 - googleifLogger - INFO - Using start time/end time as 1743606506988283853 2025-04-02 16:08:26.988284 / 1749798945180156719 2025-06-13 08:15:45
+2025-06-13 08:15:45,180 - googleifLogger - INFO - Setting up Google IF. Data Set 1743606506988283853-1749798945180156719
+2025-06-13 14:42:42,619 - googleifLogger - INFO - google_fit_if Google If __init__
+2025-06-13 14:42:43,826 - googleifLogger - INFO - google_fit_if Google If run() function start
+2025-06-13 14:42:44,093 - googleifLogger - INFO - Number of records deleted from today EndDate 2025-06-13 0 and last two 2
+2025-06-13 14:42:44,094 - googleifLogger - INFO - Using start time/end time as 1743594412899217287 2025-04-02 12:46:52.899217 / 1749822164094620034 2025-06-13 14:42:44
+2025-06-13 14:42:44,094 - googleifLogger - INFO - Setting up Google IF. Data Set 1743594412899217287-1749822164094620034
+2025-06-13 14:50:40,851 - googleifLogger - INFO - google_fit_if Google If __init__
+2025-06-13 14:50:42,162 - googleifLogger - INFO - google_fit_if Google If run() function start
+2025-06-13 14:50:42,381 - googleifLogger - INFO - Number of records deleted from today EndDate 2025-06-13 0 and last two 2
+2025-06-13 14:50:42,381 - googleifLogger - INFO - Using start time/end time as 1743587933732000000 2025-04-02 10:58:53.732000 / 1749822642381685038 2025-06-13 14:50:42
+2025-06-13 14:50:42,381 - googleifLogger - INFO - Setting up Google IF. Data Set 1743587933732000000-1749822642381685038

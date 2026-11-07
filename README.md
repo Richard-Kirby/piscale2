@@ -16,8 +16,5 @@ For some reason the hx711 shared object file wasn't found. 'ImportError: libhx71
 
 To get the Google Fit connection working for calories you use for the day, you need to get the JSON client secret from the Google OAUTH service and copy it to client_secrets.json. 
 
-piscale service enables running piscale as a service via systemd. It will need to be modified to use your own username and loaded as per other services.
-
-Piscale makes use of 'Onboard' onscreen keyboard as it is intended to be used on a touchscreen. 
-
-** 
+piscale2.service enables running piscale as a service via user systemd. Check the current documentation on using user systemd.
+ 

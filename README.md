@@ -12,8 +12,9 @@ Set up a virtual Python environment. Using "python -m venv venv" - this puts a n
 
 Once it is clear you are running in the venv, the you need to run this install dependencies via 'pip3 install -r requirements.txt'
 
-
 For some reason the hx711 shared object file wasn't found. 'ImportError: libhx711.so: cannot open shared object file: No such file or directory'. Running 'sudo ldconfig' solved this problem. 
+
+To get the Google Fit connection working for calories you use for the day, you need to get the JSON client secret from the Google OAUTH service and copy it to client_secrets.json. 
 
 piscale service enables running piscale as a service via systemd. It will need to be modified to use your own username and loaded as per other services.
 

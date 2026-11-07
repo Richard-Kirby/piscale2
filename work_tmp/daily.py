@@ -35,13 +35,6 @@ class FoodDataFrame(ttk.Frame):
         self.food_data_tree_frame = ttk.Frame(self.main_food_frame)
         self.create_food_data_tree(self.food_data_tree_frame)
 
-        # Keyboard icon preparation
-        kb_image = ImageTk.PhotoImage(Image.open(f'{mod_path}/images/keyboard_dark.png').resize((24, 24)))
-        # Button that opens an onscreen keyboard
-        self.keyb_button = ttk.Button(self.main_food_frame, image=kb_image, command=self.keyb, style= 'piscale.TButton',
-                                      width=60)
-        self.keyb_button.image = kb_image
-
         # Search entry box
         self.search_str = tk.StringVar()
         self.search_box = ttk.Entry(
@@ -57,7 +50,6 @@ class FoodDataFrame(ttk.Frame):
         self.update_item_calories()
 
         self.search_box.grid(column=0, row=0, sticky='we')
-        self.keyb_button.grid(column=1, row=0, sticky='e')
         self.food_data_tree_frame.grid(column=0, row=1, columnspan=2)
         self.selected_item_cal_label.grid(column=0, row=2, columnspan=2, sticky ='w')
 
@@ -73,7 +65,7 @@ class FoodDataFrame(ttk.Frame):
         # List of food and their characteristics.
         self.food_tree_view = ttk.Treeview(food_data_tree_frame,
                                            columns=('db_id', 'FoodCode', 'FoodName', 'kCal', 'Fave'),
-                                           show='headings', height=16)
+                                           show='headings', height=14)
 
         self.food_tree_view["displaycolumns"] = ('FoodName', 'kCal')
         self.food_tree_view.column('FoodName', anchor=tk.W, width=380)
@@ -96,13 +88,6 @@ class FoodDataFrame(ttk.Frame):
         search_str = self.search_str.get()
         print(search_str, event)
         self.populate_food_data(search=search_str)
-
-    # Bring onscreen keyboard up.
-    def keyb(self):
-        # print("keyboard function")
-        self.search_box.focus_set()
-        # os.system(self.keyb_sh_cmd)
-        subprocess.Popen('onboard')
 
     # Grab the data from the Database and add it to the TreeView table.
     def populate_food_data(self, search=None):
@@ -204,15 +189,6 @@ class MealFrame(ttk.Frame):
         meal_tree_frame = ttk.Frame(meal_frame)
         self.create_meal_tree(meal_tree_frame)
 
-        # Entry box Food Name for adhoc meal
-        self.adhoc_meal_name = tk.StringVar()
-        adhoc_meal_name_box = ttk.Entry(
-            meal_frame,
-            textvariable=self.adhoc_meal_name,
-            font=config.data_font, width=12
-        )
-        adhoc_meal_name_box.grid(column=0, row=0)
-
         # Entry box kCal for adhoc meal
         self.adhoc_meal_kcal = tk.IntVar()
         self.adhoc_meal_kcal_box = ttk.Entry(
@@ -281,7 +257,7 @@ class MealFrame(ttk.Frame):
         # Create the meal TreeView, which tracks the meal
         self.meal_tree_view = ttk.Treeview(meal_frame,
                                            columns=('db_id', 'FoodCode', 'FoodName', 'Weight', 'kCal'),
-                                           show='headings', height=6)
+                                           show='headings', height=5)
         self.meal_tree_view.column('FoodName', anchor=tk.W, width=150)
         self.meal_tree_view.column('Weight', anchor=tk.E, width=40)
         self.meal_tree_view.column('kCal', anchor=tk.E, width=40)
@@ -307,7 +283,7 @@ class MealFrame(ttk.Frame):
 
         # Create the meal TreeView, which tracks the meal
         self.calorie_history_view = ttk.Treeview(calorie_history_frame, columns=('db_id', 'Time', 'Weight', 'kCal'),
-                                                 show='headings', height=7)
+                                                 show='headings', height=5)
 
         self.calorie_history_view["displaycolumns"] = ('Time', 'kCal')
 
@@ -538,7 +514,7 @@ class DailyFrame:
         all_radio.grid(column=0, row=1, sticky='nw')
         add_to_meal_btn.grid(column=0, row=2, sticky='ne', pady=5)
         remove_from_meal_btn.grid(column=0, row=3, sticky='ne')
-        toggle_favourite_btn.grid(column=0, row=4, sticky='se', pady=60)
+        toggle_favourite_btn.grid(column=0, row=4, sticky='se', pady = (30, 5))
 
         # Initialise total calories for today.
         self.todays_calories = 0

@@ -56,7 +56,7 @@ class CalorieHistoryPlotter:
         plt.style.use('dark_background')
 
         # Set up the plot
-        fig, ax = plt.subplots(figsize=(6.25, 4))
+        fig, ax = plt.subplots(figsize=(6.25, 3.5))
 
         # Bar Plot
 
@@ -88,7 +88,6 @@ class CalorieHistoryPlotter:
 
         # rotate and align the tick labels so they look better
         fig.autofmt_xdate()
-        # fig.tight_layout()
 
         # naming the x axis
         # matplotlib.pyplot.xlabel('Date', fontsize=11)
@@ -100,8 +99,9 @@ class CalorieHistoryPlotter:
         # giving a title to my graph
         matplotlib.pyplot.title('Calorie History', fontsize=14)
 
-        ax.tick_params(axis='both', which='major', labelsize=10)
+        ax.tick_params(axis='both', which='major', labelsize=8)
 
+        fig.tight_layout()
         matplotlib.pyplot.savefig(file_name)
 
         # Close the plot to reduce memory usage.
@@ -144,8 +144,8 @@ class CalorieHistoryFrame(ttk.Frame):
         # Set up reference to the Google Fit Interface, which has the data of spent calories.
         self.google_fit_if = google_fit_if
 
-        temp_label = ttk.Label(self.frame, text="Temp", style = 'piscale.TButton')
-        temp_label.grid(column=0, row=0)
+        # temp_label = ttk.Label(self.frame, text="Temp", style = 'piscale.TButton')
+        # temp_label.grid(column=0, row=0)
 
         # Create the Food Data Tree
         history_tree_frame = ttk.Frame(self.frame)
@@ -200,7 +200,7 @@ class CalorieHistoryFrame(ttk.Frame):
 
         # Create the meal TreeView, which tracks the meal
         self.history_tree = ttk.Treeview(history_tree_frame, columns=('db_id', 'Date', 'Weight', 'kCal In', 'kCal Out'),
-                                         show='headings', height=18)
+                                         show='headings', height=15)
 
         self.history_tree["displaycolumns"] = ('Date', 'kCal In', 'kCal Out')
 

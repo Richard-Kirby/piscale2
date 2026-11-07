@@ -10,6 +10,7 @@ import bathroom_scale_if
 # importing the required module
 import matplotlib
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 
 import logging
 import configparser
@@ -48,16 +49,20 @@ class WeightHistoryPlotter:
         y_data = y_data[-self.max_plot_points:]
 
         # Set up the plot
-        fig, ax = plt.subplots(figsize=(6.25, 4))
+        fig, ax = plt.subplots(figsize=(6.25, 3.5))
 
-        # Plot starting and target weights
         plt.axhline(y=start_weight, linewidth=1, color='r', zorder=5)
         plt.axhline(y=target_weight, linewidth=1, color='g', zorder=5)
 
-        ax.plot(x_data, y_data, '-', color = '#1E90FF', zorder = 10)
+        ax.plot(x_data, y_data, '-', color='#1E90FF', zorder=10)
 
-        # rotate and align the tick labels so they look bette
+        ax.xaxis.set_major_formatter(
+            mdates.DateFormatter('%d/%m/%y')
+        )
+
         fig.autofmt_xdate()
+
+        ax.tick_params(axis='both', which='major', labelsize=8)
 
         # naming the x axis
         matplotlib.pyplot.xlabel('Date')
@@ -151,7 +156,7 @@ class WeightHistoryFrame(tk.Frame):
 
         # Create the meal TreeView, which tracks the meal
         self.history_tree = ttk.Treeview(history_tree_frame, columns=('db_id', 'Date', 'User', 'Weight'),
-                                         show='headings', height=17)
+                                         show='headings', height=13)
 
         self.history_tree["displaycolumns"] = ('Date', 'Weight')
 

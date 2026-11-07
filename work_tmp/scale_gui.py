@@ -6,6 +6,7 @@ from tkinter import ttk
 import pathlib
 from PIL import Image, ImageTk
 import cProfile
+import subprocess
 
 # HX711 library for the scale interface.
 import HX711 as HX
@@ -27,6 +28,43 @@ logger = logging.getLogger('scaleLogger')
 logger.setLevel(logging.DEBUG)
 
 mod_path = pathlib.Path(__file__).parent
+
+def show_keyboard():
+    subprocess.run(
+        [
+            "busctl",
+            "--user",
+            "call",
+            "sm.puri.OSK0",
+            "/sm/puri/OSK0",
+            "sm.puri.OSK0",
+            "SetVisible",
+            "b",
+            "true",
+        ],
+        check=False,
+    )
+
+def entry_touched(event):
+    entry = event.widget
+
+    # Give the selected entry initial focus.
+    entry.focus_set()
+    entry.icursor(tk.END)
+
+    # Explicitly show the Wayland keyboard.
+    show_keyboard()
+
+    # Once the keyboard is up, restore focus to the Entry.
+    entry.after(
+        400,
+        lambda: restore_entry_focus(entry)
+    )
+
+def restore_entry_focus(entry):
+    entry.winfo_toplevel().lift()
+    entry.focus_force()
+    entry.icursor(tk.END)
 
 class Weight:
     def __init__(self):
@@ -88,7 +126,7 @@ class App(ttk.Frame):
 
         # Notebook creation
         notebook = ttk.Notebook(main_frame)
-        notebook.pack(expand=True)
+        # notebook.pack(expand=True)
 
         # create frames
         daily_frame = ttk.Frame(notebook)
@@ -114,7 +152,7 @@ class App(ttk.Frame):
         notebook.add(daily_frame, text='Daily')
         notebook.add(history_frame, text='History')
         notebook.add(body_weight_frame, text='Weight')
-        notebook.grid(column=0, row=1, columnspan=4, pady=0)
+        notebook.grid(column=0, row=1, columnspan=4, pady=0, sticky = "nsew")
 
         # Widgets that are part of the main application
         zero_btn = ttk.Button(main_frame, text="Zero", command=self.weight.zero, style = 'piscale.TButton', width=5)
@@ -131,7 +169,14 @@ class App(ttk.Frame):
         # self.time_label.grid(column=2, row=0, sticky='e')
         exit_btn.grid(column=3, row=0, sticky='e')
 
-        main_frame.grid(column=0, row=0)
+        main_frame.grid(
+            column=0,
+            row=0,
+            sticky="nsew"
+        )
+
+        main_frame.rowconfigure(0, weight=0)
+        main_frame.rowconfigure(1, weight=1)
 
         # The daily frame has all the stuff to measure food, etc.
         self.daily_frame = daily.DailyFrame(daily_frame, self.weight)
@@ -177,6 +222,16 @@ class App(ttk.Frame):
 
 root = tk.Tk()
 
+root.rowconfigure(0, weight=1)
+root.columnconfigure(0, weight=1)
+
+root.bind_class(
+    "TEntry",
+    "<ButtonRelease-1>",
+    entry_touched,
+    add="+"
+)
+
 root.tk.call('lappend', 'auto_path', f'{mod_path}/themes/awthemes-10.4.0')
 root.tk.call('package', 'require', 'awdark')
 
@@ -189,6 +244,7 @@ app = App(master = root)
 root.wm_title("Piscale Calorie Minder - a Richard Kirby project")
 logger.info("Start Up GUI")
 
-root.attributes('-fullscreen', True)
+# root.attributes('-fullscreen', True)
+root.attributes('-zoomed', True)
 # app.update_clock()
 root.mainloop()
